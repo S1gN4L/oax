@@ -1,0 +1,11 @@
+#summary This is a brief outline of how to add a console command under either g_cmds.c or g_svcmds.c.
+
+= Introduction =
+
+Per revision "R24" console command handling has been significantly changed.  ClientCommand (g_cmds.c) and ConsoleCommand (g_svcmds.c) now employ a loop structure by which to check the command the user/player enters against a table.  If it successfully finds a match, it then performs a validation check based on the parameters specified in the table.  If this validation check is successful, the loop then calls the associated command handler specified inside the table.  
+
+This provides significant "modularity" to adding/maintaining console commands, and provides increased flexibility to the "child" command handlers.  Since all "child" command handlers which require "arguments" now must be written with the ability to trap those arguments themselves, "commands" having similar functionality can now be called from the same handler. 
+
+= Details =
+
+Will update these later today. Gotta eat and do laundry!!!
