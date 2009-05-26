@@ -9,8 +9,11 @@ I'll post files that should not be changed here. There are three reasons for not
 
 == List of Files ==
 
-  * ===  q_shared.h ===
+  * ===  qcommon/q_shared.h ===
 Changing declarations in this file can/will really confuse the server-especially any of the typedefs, structs, or enums.  Expect to crash the game when modding this as much of it is basically an API for the engine.  
-  * === q_shared.c ===
-Since all of q_shared.c's declarations are contained in q_shared.h, modding this file can necessitate changing q_shared.h.  It's probably best to leave it alone.   
-    
+  * === qcommon/q_shared.c ===
+Since all of q_shared.c's declarations are contained in q_shared.h, modding this file can necessitate changing q_shared.h.  It's probably best to leave it alone. If you feel that something belongs in this file it properly belongs in bg_libs.c instead.  
+  * === client/keycodes.h ===
+Shared with the engine. For reference only.
+  * === botlib/ ===
+Engine only. For reference only.
