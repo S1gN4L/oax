@@ -1,0 +1,41 @@
+#summary Describes the function G_GlobalSound and it's usage.
+
+= Summary =
+
+The function G_GlobalSound was added in revision r33.  This function allows for the server to tell all connected clients to play a sound.  
+
+In all honesty, the way sounds are played is pretty complex--local only sounds are triggered by clients directly, while most other sounds are triggered from events/player states/entity states contained in the snapshots sent out by the server. 
+
+This addition should significantly enhance the ability to add sounds to events in gameplay. It provides the "qagame" module direct control over what sounds to play, and when to play them.  
+
+The rationale for this feature is that in all honesty, the game experience could be enhanced by having certain gameplay events being announced globally--think of it like a TV/Radio announcer for a football (soccer) match versus the announcer at the stadium. The TV/Radio announcer is much more engaging since he or she is actually describing what is happening, while the announcer at the stadium merely declares that an event has occurred.  
+
+There are some considerations however to employing this function--see the section below. 
+
+
+= How the Code Works =
+
+Coming soon...When I feel like rewriting code in Plain Language :)
+
+= Usage =
+
+The sound to be played must be assigned a "sound index" first. Then the call to G_GlobalSound can be made.   To do this, initialize an `int` and then set it's value to the function G_SoundIndex.  Then call G_GlobalSound with the `int` as a parameter. 
+{{{
+    int soundIndexReturned;
+
+    //Some code blah blah blah
+    
+    soundIndexReturned = G_SoundIndex( "sound/misc/soundtobeplayed.wav" );
+    G_GlobalSound( soundIndexReturned );
+   
+}}}
+*Note:*
+While G_SoundIndex does return an `int`, it must *NOT* be nested as a parameter in G_GlobalSound.  An example of doing this is:
+{{{
+   G_GlobalSound( G_SoundIndex( "sound/misc/soundtobeplayed.wav" ) );
+}}}
+Doing this can and will crash clients leaving on their desktop with nothing more than an obscure "S_FindName" error message. How this happens is pretty complex and outside the scope of this page.
+
+You can call G_SoundIndex with a reference to a "char" variable instead--however this provides for the possibility of the above client crash if you have not properly assigned the char a value. 
+
+Also, there is a limit to the maximum number of sounds a client can have, so this function must be used wisely.   
