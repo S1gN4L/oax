@@ -8,14 +8,35 @@ In all honesty, the way sounds are played is pretty complex--local only sounds a
 
 This addition should significantly enhance the ability to add sounds to events in gameplay. It provides the "qagame" module direct control over what sounds to play, and when to play them.  
 
-The rationale for this feature is that in all honesty, the game experience could be enhanced by having certain gameplay events being announced globally--think of it like a TV/Radio announcer for a football (soccer) match versus the announcer at the stadium. The TV/Radio announcer is much more engaging since he or she is actually describing what is happening, while the announcer at the stadium merely declares that an event has occurred.  
+The rationale for this feature is that, in all honesty, the gameplay experience can be significantly enhanced if certain gameplay events are announced globally--think of it like the TV/Radio announcer for a football (soccer) match, versus the announcer at the stadium. The TV/Radio announcer is much more engaging since he or she is actually describing what is happening, while the announcer at the stadium merely declares that an event has occurred.  
 
-There are some considerations however to employing this function--see the section below. 
+There are some considerations however when employing this function--see the section below. 
 
 
 = How the Code Works =
 
-Coming soon...When I feel like rewriting code in Plain Language :)
+{{{
+void G_GlobalSound( int soundIndex )
+{
+    gentity_t  *te;    
+        if( ( soundIndex == 0 ) || ( !soundIndex ) ) {
+            #ifdef DEBUG
+            G_Printf( "GlobalSound: Error, no soundIndex specified. Check your code!\n" );      
+            #endif
+            return;
+        }    
+        te = G_TempEntity( level.intermission_origin, EV_GLOBAL_SOUND );
+        te->s.eventParm = soundIndex;
+        te->r.svFlags |= SVF_BROADCAST;
+}
+
+}}}
+  # G_GlobalSound first initializes a "game entity," "te."
+  # G_GlobalSound aborts if there is a bad parameter passed to it. Continuing would cause the nasty crash described below.
+  # Since the function can really cause problems, I added an error message when compiling a "DEBUG" build.   
+  # It then defines "te" as a temporary entity with the EV_GLOBAL_SOUND event.  Temp entities are used for creating events at particular positions. 
+  # The code then defines the parameter for the EV_GLOBAL_SOUND event as the soundIndex passed to G_GlobalSound.
+  # It then sets a broadcast flag for the entity, which is processed by the server executable on the next snapshot, where the server server executable will tell all the connected clients to play the sound. 
 
 = Usage =
 
@@ -34,7 +55,7 @@ While G_SoundIndex does return an `int`, it must *NOT* be nested as a parameter 
 {{{
    G_GlobalSound( G_SoundIndex( "sound/misc/soundtobeplayed.wav" ) );
 }}}
-Doing this can and will crash clients leaving on their desktop with nothing more than an obscure "S_FindName" error message. How this happens is pretty complex and outside the scope of this page.
+Doing this can and will crash clients when they receive the instruction to play a sound that has not been indexed. It will leave them on their desktop with nothing more than an obscure "S_FindName" error message. 
 
 You can call G_SoundIndex with a reference to a "char" variable instead--however this provides for the possibility of the above client crash if you have not properly assigned the char a value. 
 
