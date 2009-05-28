@@ -1,0 +1,32 @@
+#summary Documentation on how to enable and configure killing/death sprees, and multi-kills. Note: Working document, check back often!
+
+= Overview =
+
+Killing Sprees, Death Sprees, and Multikills are completely configured server-side, and fully customizable.  These were designed to empower server owners/operators to customize their server and give it a unique feel to encourage regular play.   
+
+NOTE: While these features can also be enabled in Single-Player mode, since they were designed for multi-player customization, they are not enabled by default!! 
+
+= Killing/Death Sprees =
+
+3:15 in the morning, more to come tomorrow. 
+
+=== Enabling ===
+
+3:15 in the morning, more to come tomorrow. 
+
+=== Configuring ===
+
+3:15 in the morning, more to come tomorrow. 
+
+= Multikills =
+
+Note: Multikills are currently a work in progress.  The cvar exists to enable/disable them, but it will have absolutely no effect. Adding any [mkill] sections to your settings file will also have no effect, except to generate a bunch of "unrecognized token" messages on game/map loading. 
+
+=== Enabling ===
+Multikill functionality is enabled via the cvar, "g_altExcellent."  Setting this to "1" will have the "Excellent" sound replaced by sounds specified in your settings file.  
+
+=== Configuring ===
+
+3:15 in the morning, more to come tomorrow. 
+
+= Structure of Settings File =
