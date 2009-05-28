@@ -2,13 +2,19 @@
 
 = Overview =
 
-Killing Sprees, Death Sprees, and Multikills are completely configured server-side, and fully customizable.  These were designed to empower server owners/operators to customize their server and give it a unique feel to encourage regular play.   
+Killing Sprees, Death Sprees, and Multikills are completely configured server-side, and fully customizable.  They are designed to empower server owners/operators in customizing their server and give it a unique feel that encourages regular play.
 
-NOTE: While these features can also be enabled in Single-Player mode, since they were designed for multi-player customization, they are not enabled by default!! 
+All three features can be configured independently of one another.    
 
+NOTE: While these features can also be enabled in Single-Player mode, they were designed for multi-player customization and thus are not enabled by default!! 
+----
 = Killing/Death Sprees =
 
-3:15 in the morning, more to come tomorrow. 
+Killing Sprees and Death Sprees are a number of consecutive kills or deaths that a player accumulates without dying (for a killing spree) or without killing someone else (for a death spree).  Upon reaching that number of consecutive kills or deaths, a message, chat or center printed, is shown globally, and a corresponding "announcer" sound is played (also globally). When this happens, the are considered "on a spree." 
+
+Experiencing an opposite a spree event while on a spree (a death if the player is on a killing spree, or a kill if the player is on a death spree) puts the player's appropriate spree counter back to 0. 
+
+*Note:* Team kills do not count towards a killing spree, and suicides only count against a killing spree. 
 
 === Enabling ===
 
@@ -17,7 +23,7 @@ NOTE: While these features can also be enabled in Single-Player mode, since they
 === Configuring ===
 
 3:15 in the morning, more to come tomorrow. 
-
+----
 = Multikills =
 
 Note: Multikills are currently a work in progress.  The cvar exists to enable/disable them, but it will have absolutely no effect. Adding any [mkill] sections to your settings file will also have no effect, except to generate a bunch of "unrecognized token" messages on game/map loading. 
@@ -28,5 +34,5 @@ Multikill functionality is enabled via the cvar, "g_altExcellent."  Setting this
 === Configuring ===
 
 3:15 in the morning, more to come tomorrow. 
-
+----
 = Structure of Settings File =
