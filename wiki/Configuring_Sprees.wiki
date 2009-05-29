@@ -6,9 +6,7 @@ First, if you are reading this page without having first read how to enable Kill
 
 Now that you have read how to enable Killing Sprees and Death Sprees, you are ready to configure them.  The first premise that must be understood is Killing Sprees and Death Sprees will occur at the same fixed interval specified by the cvar "g_spreeDiv."  
 
-For example, at the default setting of "5," Killing Sprees and Death Sprees, will occur at every 5 kills and 5 deaths. Each interval can be defined by an "level" in the settings file of the server, beginning at 1, ending at 32.  32 is the maximum allowable number of Killing Sprees that can be defined by the server operator. 32 is the maximum of Death Sprees which can be defined as well. 
-
-See the end of this page for a description of the "Infinite Behavior" as defined on the [Sprees_and_Multikills Main Page]
+For example, at the default setting of "5," Killing Sprees and Death Sprees, will occur at every 5 kills and 5 deaths. Each interval can be defined by a "level" in the settings file of the server, beginning at 1, ending at 32.  See below for why 32. 
 ----
 
 = Details =
