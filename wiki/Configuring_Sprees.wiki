@@ -11,7 +11,7 @@ Add your content here.  Format your content with:
   * Headings, paragraphs, and lists
   * Automatic links to other wiki pages
 
-Next Page:[MultiKill_Config Configuring Mult-kills]
+Next Page:[MultKill_Config Configuring Mult-kills]
 
 Previous Page: [Enabling_Sprees_MultiKills Enabling Sprees/Multi-kills]
 
