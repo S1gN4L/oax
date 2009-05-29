@@ -1,0 +1,18 @@
+#summary How to configure Killing / Death Sprees for OpenArena.
+
+= How To: =
+
+Adding Page Structure: Check back for More Later!!!!
+
+= Checklist =
+
+Add your content here.  Format your content with:
+  * Text in *bold* or _italic_
+  * Headings, paragraphs, and lists
+  * Automatic links to other wiki pages
+
+Next Page:[Sprees_and_Multikills Killing Sprees/Multikills Home]
+
+Previous Page: [Enabling_Sprees_MultiKills Enabling Sprees/Multi-kills]
+
+ 
