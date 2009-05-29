@@ -2,37 +2,21 @@
 
 = Overview =
 
-Killing Sprees, Death Sprees, and Multikills are completely configured server-side, and fully customizable.  They are designed to empower server owners/operators in customizing their server and give it a unique feel that encourages regular play.
+Killing Sprees, Death Sprees, and Multikills are new features introduced in revision [http://code.google.com/p/oax/source/detail?r=49 Revision 49]. These features add a level of customization which significantly enhances the multiplayer experience of OpenArena.  See each page below for more information on how to enable, customize, and work with these new features. 
 
-All three features can be configured independently of one another.    
+== Pages ==
+
+*[Enabling_Sprees_MultiKills  Enabling Sprees and Multikills]*
+
+*[Configuring_Sprees Configuring Killing / Death Sprees]*
+
+*[MultiKill_Config Configuring Multi-kills]*
+
+=== Reference ===
+
+The Settings File
+
+Building Custom pk3's
 
 NOTE: While these features can also be enabled in Single-Player mode, they were designed for multi-player customization and thus are not enabled by default!! 
 ----
-= Killing/Death Sprees =
-
-Killing Sprees and Death Sprees are a number of consecutive kills or deaths that a player accumulates without dying (for a killing spree) or without killing someone else (for a death spree).  Upon reaching that number of consecutive kills or deaths, a message, chat or center printed, is shown globally, and a corresponding "announcer" sound is played (also globally). When this happens, the are considered "on a spree." 
-
-Experiencing an opposite a spree event while on a spree (a death if the player is on a killing spree, or a kill if the player is on a death spree) puts the player's appropriate spree counter back to 0. 
-
-*Note:* Team kills do not count towards a killing spree, and suicides only count against a killing spree. 
-
-=== Enabling ===
-
-3:15 in the morning, more to come tomorrow. 
-
-=== Configuring ===
-
-3:15 in the morning, more to come tomorrow. 
-----
-= Multikills =
-
-Note: Multikills are currently a work in progress.  The cvar exists to enable/disable them, but it will have absolutely no effect. Adding any [mkill] sections to your settings file will also have no effect, except to generate a bunch of "unrecognized token" messages on game/map loading. 
-
-=== Enabling ===
-Multikill functionality is enabled via the cvar, "g_altExcellent."  Setting this to "1" will have the "Excellent" sound replaced by sounds specified in your settings file.  
-
-=== Configuring ===
-
-3:15 in the morning, more to come tomorrow. 
-----
-= Structure of Settings File =
