@@ -10,7 +10,7 @@ Killing Sprees, Death Sprees, and Multikills are new features introduced in revi
 
 *[Configuring_Sprees Configuring Killing / Death Sprees]*
 
-*[MultiKill_Config Configuring Multi-kills]*
+*[MultKill_Config Configuring Multi-kills]*
 
 === Reference ===
 
