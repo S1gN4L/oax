@@ -6,5 +6,6 @@ Creating Page Structure...Please Check Back Soon
 
 = Details =
 
-Next Page: Configuring Killing / Death Sprees
+Next Page: [Configuring_Sprees Configuring Killing / Death Sprees]
 
+Previous Page: [Sprees_and_Multikills Sprees / Multikills Home ]
