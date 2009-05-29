@@ -1,0 +1,10 @@
+#summary How to enable Killing / Death Sprees and Multi-Kills for OpenArena.
+
+= Overview/Background/Assumptions =
+
+Creating Page Structure...Please Check Back Soon
+
+= Details =
+
+Next Page: Configuring Killing / Death Sprees
+
