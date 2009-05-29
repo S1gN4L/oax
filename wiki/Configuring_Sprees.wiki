@@ -1,15 +1,73 @@
 #summary How to configure Killing / Death Sprees for OpenArena.
 
-= How To: =
+= Overview =
 
-Adding Page Structure: Check back for More Later!!!!
+First, if you are reading this page without having first read how to enable Killing Sprees and Death Sprees, click on the Previous Page link below. 
 
-= Checklist =
+Now that you have read how to enable Killing Sprees and Death Sprees, you are ready to configure them.  The first premise that must be understood is Killing Sprees and Death Sprees will occur at the same fixed interval specified by the cvar "g_spreeDiv."  
 
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+For example, at the default setting of "5," Killing Sprees and Death Sprees, will occur at every 5 kills and 5 deaths. Each interval can be defined by an "level" in the settings file of the server, beginning at 1, ending at 32.  32 is the maximum allowable number of Killing Sprees that can be defined by the server operator. 32 is the maximum of Death Sprees which can be defined as well. 
+
+See the end of this page for a description of the "Infinite Behavior" as defined on the [Sprees_and_Multikills Main Page]
+----
+
+= Details =
+
+As described above, the server operator defines an interval that the Killing Sprees and Death Sprees are to occur at.  They define each "level" in the settings file. The following must happen for Killing / Death Sprees to be properly configured.
+  # A plain text file which matches the name specified by the "g_sprees" cvar must be created. 
+  # The above file must be placed in the "mod sub-directory" of the "working directory" which OpenArena will run. 
+----
+
+=== Killing Sprees ===
+{{{ 
+[kspree]
+level = 1
+printpos = 2
+message = [n] is on a killing spree!!! ( [k] kills!!! )
+sound = sound/misc/killingspree.wav
+}}}
+Killing sprees are denoted with the `[kspree]` tag as described above.  
+
+The "level" attribute is the level at which to print the message and play the sound.
+
+The "printpos" attribute instructs the server the "position" in which to "print" the "message".   Setting the "printpos" to "1" will "center print" the message across the screen, "2" will have it printed to the "chat" stream.  It's probably not wise to set every message to "center print" as it will become annoying/distracting for players if killing sprees are common on the server. ( or if "g_spreeDiv" is set to a low number like "2" )
+
+The "message" attribute is the message for the server to print when the specified Killing Spree occurs.   The text `[n]` and `[k]` are placeholders in the message. `[n]` will be replaced by the player's name. `[k]` will be replaced by the number of kills for that level.   
+
+The "sound" attribute is the sound for the server to play when the specified Killing Spree occurs.  For the sound to be played properly, the path must be made in accordance with the Quake 3/OpenArena file system structure, see the page Building pk3's for more information. 
+
+So, in summation for the example written above, when "g_spreeDiv" is set to 5, and the player "Leilol" acheives 5 consecutive kills without dying, Leilol has acheived the first level (level = 1). This means the following will happen. 
+
+ # The "message" "Leilol is on a killing spree!!! ( 5 kills !!! ) will be displayed to all players in the "chat" block at the upper left hand side of the screen. 
+ # The "sound" killingspree.wav will be played to all players.  
+
+==== Configuration Rules: ====
+  # The maximum number of killing sprees which the server can read is 32. It will throw error messages or possibly even crash if more than that are defined ( Do you really even need more? ).  
+  # The "message" can be no more than 150 characters, ( with the name and kill number placeholders replaced ). Longer messages will be truncated, or even ignored.   
+  # Server operators can specify text to be formatted to a certain color in the same manner they would set a player name or format chat text.    
+  # If the "printpos" is not set to either "1" or "2", the message will not be printed. 
+  # Sound files must be 22khz wav's or "ogg" format.  See the [http://ioquake3.org ioQuake3 home page ] for more information on enabling support for "ogg" sound files.
+  # Killing Sprees above 99 kills in length will be truncated.  If this happens in regular online play, WOWWW!!! We still won't change it. :-)
+----
+ 
+=== Death Sprees ===
+
+Death Sprees are configured identically to killing sprees except they use the `[dspree]` tag instead. 
+{{{
+[dspree]
+level = 1
+printpos = 2
+message = [n] is a total NOOBBBB!!! ( [k] straight deaths!!! )
+sound = sound/misc/noob.wav
+}}} 
+
+So again, if the cvar "g_spreeDiv" is set to "5," and the player "SharpestTool" dies 5 times in a row without a kill, he will trigger the first "level" and the following will happen. 
+
+  # The "message" "SharpestTool is a total NOOBBBB!!! ( 5 straight deaths!!! )" will be displayed to all players in the "chat" block at the upper left side of the screen. 
+  # The "sound" "noob.wav" will be played to all players. 
+
+Death Sprees also have the same configuration rules as Killing Sprees. 
+----
 
 Next Page:[MultKill_Config Configuring Mult-kills]
 
