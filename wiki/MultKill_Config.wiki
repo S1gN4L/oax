@@ -1,6 +1,6 @@
 #summary How to configure Multi-kills in OpenArena.
 
 = Introduction =
-Multi-kills are designed to replace the stock "Excellent" sound without removing the actual award or graphics drawn for clients.   That said, you should have read first how to [Enabling_Sprees_MultiKills Enable Sprees and Multikills. 
+Multi-kills are designed to replace the stock "Excellent" sound without removing the actual award or graphics drawn for clients.   That said, you should have read first how to [Enabling_Sprees_MultiKills Enable Sprees and Multikills]. 
 
 = Details =
