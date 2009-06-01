@@ -12,11 +12,11 @@ Killing Sprees and Death Sprees are enabled together.  If only one of these feat
 
 To enable them, first, the cvar "g_sprees" must be set to the name of the settings file contained in the working directory for Open Arena.  
 
-For example, under Windows Visa/7, the file would reside under the "C:\Users\<User Name>\App Data\Roaming\OpenArena\<mod name>" directory (where user name is the name of the user that launches the server, and mod name is the name of the directory specified by the "fs_game" command line option.  See the linux documentation at http://openarena.ws/ for linux specifications of the "working directory." 
+For example, under Windows Visa/7, the file would reside under the `C:\Users\<User Name>\App Data\Roaming\OpenArena\<mod name>` directory (where user name is the name of the user that launches the server, and mod name is the name of the directory specified by the "fs_game" command line option.  See the linux documentation at http://openarena.ws/ for linux specifications of the "working directory." 
 
-So, for the example above setting "g_sprees" to "sprees.dat" would specify OpenArena to look for "C:\Users\<User Name>\App Data\Roaming\OpenArena\<mod name>\sprees.dat".
+So, for the example above setting "g_sprees" to "sprees.dat" would specify OpenArena to look for `C:\Users\<User Name>\App Data\Roaming\OpenArena\<mod name>\sprees.dat`.
 
-Next, the cvar "g_spreeDiv" must be set to the interval which you want your killing and death sprees to occur at.  See the configuration page for more information. 
+Next, the cvar "g_spreeDiv" must be set to the interval which you want your killing and death sprees to occur at.  See the [Configuring_Sprees Killing/Death Spree Configuration Page] for more information. 
 
 Once the above two cvar's are set, you are ready to configure your killing and death sprees.
 
@@ -29,7 +29,7 @@ Once the above two cvar's are set, you are ready to configure your killing and d
 
 Once you have the cvar "g_sprees" set,  you can enable multikills with the cvar "g_altExcellent".  Setting "g_altExcellent" to 1 enables them, 0 disables them. They are disabled by default. 
 
-Note: Turning on Multi-kills disables the stock "Excellent" sound from being played on the client.  If "g_altExcellent" is enabled and no Multi-kills are defined in the spree settings file, no sound will be played to the client.  
+Note: Turning on Multi-kills disables the stock "Excellent" sound from being played on the client.  If "g_altExcellent" is enabled and no Multi-kills are defined in the spree settings file, the server will revert to stock behavior.  Please see the [MultKill_Config Configuring Multikills Page] for more information.   
 
 *Reference*
 
