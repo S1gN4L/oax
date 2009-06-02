@@ -13,7 +13,7 @@ For example, at the default setting of "5," Killing Sprees and Death Sprees, wil
 
 As described above, the server operator defines an interval that the Killing Sprees and Death Sprees are to occur at.  They define each "level" in the settings file. The following must happen for Killing / Death Sprees to be properly configured.
   # A plain text file which matches the name specified by the "g_sprees" cvar must be created. 
-  # The above file must be placed in the "mod directory" of the OpenArena "working directory" where the "mod directory" is the name of the mod OpenArena will run your server under. 
+  # The above file must be placed in the "baseoa" sub-directory of the OpenArena "working directory." See the [Enabling_Sprees_Multikills previous page] for details.
 ----
 
 === Killing Sprees ===
