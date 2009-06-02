@@ -1,6 +1,12 @@
 #summary How to configure Multi-kills in OpenArena.
 
 = Introduction =
-Multi-kills are designed to replace the stock "Excellent" sound without removing the actual award or graphics drawn for clients.   That said, you should have read first how to [Enabling_Sprees_MultiKills Enable Sprees and Multikills]. 
+
+Multi-kills are designed to replace the stock "Excellent" sound without removing the actual award or graphics drawn for clients.   That said, you should have read first how to [Enabling_Sprees_MultiKills Enable Sprees and Multikills]. That page should give you the information needed regarding the cvar, `g_altExcellent` and the general behavior associated with it. 
+
 
 = Details =
+
+== Considerations/Known Issues ==
+  # Multikills were designed to be as close of replacement as possible to the stock "Excellent" sound.  As a result it's probably best to space the multi-kills at intervals of 1. 
+  # Turning on Multi-kills mid-match, without having them defined at the start of the match will result in no sound being played for the client/player who attains the "Excellent" award.   This behavior is by design...see more here `[placeholder, will put link here later].`
