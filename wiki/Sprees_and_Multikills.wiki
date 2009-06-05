@@ -8,7 +8,7 @@ Killing Sprees, Death Sprees, and Multi-kills are new features introduced in rev
 
 Killing Spree and Death Spree announcements occur along an interval specified by the server.  When a player attains a number of kills or deaths which is a multiple of that interval, a sound is played and a message is broadcast to the other players in the game.  
 
-Multi-kills are meant to replace the stock "Excellent" award sound.  A sound and message can be specified for the "number" of kills a player achieves. While the award sound is replaced, the actual award, is not.  This means that the "Excellent" sprites will still be shown above the player's head, be drawn on the achieving player's screen, and the award will still be added to the player's historical award count (as visible in the UI). Please see the configuration page for more information.  
+Multi-kills are meant to replace the stock "Excellent" award sound.  A sound and message can be specified for the "number" of kills a player achieves. While the award sound is replaced, the actual award, is not.  This means that the "Excellent" sprites will still be shown above the player's head to the other players, and the award will still be added to the player's historical award count (as visible in the UI). Please see the configuration page for more information.  
 
 
 == "Infinite" Sprees / Multi-kills ==
