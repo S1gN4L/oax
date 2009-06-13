@@ -1,0 +1,6 @@
+#summary A table listing of OpenArena Admin System commands, their usage, and their corresponding flags. 
+
+= OpenArena Admin Commands =
+
+== Table ==
+

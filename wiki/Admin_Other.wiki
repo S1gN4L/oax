@@ -1,0 +1,9 @@
+#summary Details of the other features available with the OpenArena Admin System including spam protection, Admin Messaging,  spectator chat limiting, and setting Name change rules. 
+
+= Other Features of the OpenArena Admin System =
+
+== Feature List ==
+
+== CVARS and Behavior ==
+
+== Considerations ==

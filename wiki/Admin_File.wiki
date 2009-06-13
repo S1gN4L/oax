@@ -1,0 +1,43 @@
+#summary A Sample "admin.dat" file for reference. 
+
+= Sample OpenArena "admin.dat" File =
+
+{{{
+[level]
+level   = 0
+name    = ^4Unknown Player
+flags   = iahC
+
+[level]
+level   = 1
+name    = ^5Server Regular
+flags   = iahC
+
+[level]
+level   = 2
+name    = ^6Team Manager
+flags   = iahCpP
+
+[level]
+level   = 3
+name    = ^2Junior Admin
+flags   = iahCpPkm?
+
+[level]
+level   = 4
+name    = ^3Senior Admin
+flags   = iahCpPkmBbe?
+
+[level]
+level   = 5
+name    = ^1Server Operator
+flags   = *
+
+[admin]
+name    = UnnamedPlayer
+guid    = (BLANK ON PURPOSE SAMPLE ONLY)
+level   = 5
+flags   = 
+}}}
+
+This is a work in progress....please check back. 

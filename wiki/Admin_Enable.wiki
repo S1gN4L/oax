@@ -1,0 +1,53 @@
+#summary How to Enable and Configure the OpenArena Admin System
+
+= Enabling/Configuring OpenArena Server Administration = 
+
+== Overview ==
+Enabling and configuring the OpenArena admin system is fairly simple and straightfoward for out-of-the box functionality. It only requires the Server Owner/Operator to have knowledge of where his/her OpenArena "Working Directory" is located on his/her server.
+---- 
+
+== Details ==
+For out-of-the-box functionality this checklist can be used to enable the OpenArena Admin System
+  # Create an empty plain-text "admin.dat" file.  While the OpenArena Admin system will certainly worked with the "admin.dat" file named to the default (admin.dat), we highly recommend renaming it to something else to avoid any unwanted access through security holes in the Server Operating System.   
+  # Place the empty "admin.dat" file in the working "baseoa" sub-directory of OpenArena.  
+  # Set the appropriate CVAR's. (See Below)
+  # Start your server.  Review the console output to make sure there is a line under the "game initialization" section that says "!readconfig: blah blah blah." 
+  # Delegate the highest Admin level from the "Server Console," using the !setlevel command (Syntax: !setlevel <player> <adminlevel> ). For example, if the player Sago007 is the player you want to make your highest admin, you would type !setlevel Sago007 5 (where Sago007 is the player you want to make Admin, and level 5 is the level of Admin privileges you want to give him).  This can either be done directly, for a dedicated server, or using RCON.
+  # Your "Head Admin" can now delegate lesser or equal admin privileges from within the game, using the !setlevel command either from his/her own console, the "say:" line, or the "say_team:" line.  He/she can now also execute the various Admin commands at his/her disposal.    
+  # If you desire different privileges than the default configuration, you should NOW edit the "admin.dat" file directly, setting your appropriate levels and flags accordingly. (See "Admin.Dat File" below.)  After editing the "Admin.Dat" file, be sure the !readconfig command is executed by the appropriate admin. 
+----
+
+=== CVAR's ===
+  * *g_admin:* Set's the name of the "admin.dat" file, which the Server looks for on startup, writing Kicks, Bans, and Warnings as well as storing admin levels. The default is "admin.dat."  Again we highly recommend you rename your "admin.dat" file to something else.
+  * *g_adminLog:*  Set's the name of the "admin.log" file. This file keeps track of all the Admin actions which take place on the server.   Default is "admin.log"  This should NOT be set to your Game Log file as doing so will create errors and corrupted log data. 
+  * *g_adminParseSay:* Allows for the "say:" and "say_team:" lines and commands to parse Admin commands.  "1" enables, "0" disables.   Default is "1," enabled. 
+  * *g_adminNameProtect:* Does not allow other players to rename themselves to player names used by server admins.  Setting this to "1" enables the protection, "0" disables it.   Default is "1," enabled.  We highly recommend Server Operators leave this CVAR set to default to avoid having unruly players getting your own Admins kicked, banned, or muted, etc. 
+  * *g_adminTempBan:* This is the standard time an Admin can "kick" players for.  If a longer kick is necessary, use the !ban  command instead of the !kick command.  The number must be followed by a time unit of measurement (WITHOUT SPACES!!!)  Acceptable units are "s" for seconds, "m" for minutes, "h" for hours, "d" for days, and "w" for weeks.  Default is "2m" meaning 2 minutes. 
+  * *g_adminMaxBan:*  This is the maximum time an Admin can "ban" players for.  "Banning" a player for longer will require the use of the "server Console" or delegating the "Can Permanently Ban" privilege directly to an appropriate admin.  The default is "2w" meaning 2 weeks.  The acceptable units of measurement are the same for g_adminMaxBan as they are for g_adminTempBan.  
+  * *g_maxWarnings:*  This is the maximum number of "Warnings" a player can receive before being "auto-kicked" by the Server.  Default is "3." 
+  * *g_warningExpire:* This is the amount of time (in seconds) it takes for a "Warning" to wear off.  Default is 3600, meaning 1 hour.      
+----
+
+=== The "admin.dat" File ===
+Once you have your CVAR's set, you can begin editing your "admin.dat" file.   Again, and we cannot stress this point enough, you should rename this file to something other than the default to avoid unwanted access if you are unsure or unaware of the security policies in use on your Server Operating System.
+
+The "admin.dat" file is essentially a storage file for all the necessary information for use of the OpenArena Admin System.  It stores the admin levels defined by the Server Operator, the admin levels for each admin, custom Command definitions, Players Bans, Player Warnings, and Player Kicks.  
+
+IMPORTANT: IF THIS FILE IS DELETED OR BECOMES CORRUPTED THE SERVER WILL LOSE ALL INFORMATION AND REVERT TO DEFAULTS! *BE SURE TO BACK-UP THIS FILE OFTEN!!!*
+
+Now that all the scary stuff is out of the way, let's take a look at the "admin.dat" file.  (For a visual sample open this link in a new window [Admin_Sample here.])
+
+The various sections of the "admin.dat" file are denoted by bracket tags. `[level]` corresponds to an admin level, `[admin]` for an individual admin, `[command]` for a custom command, `[ban]` for kicks/bans, and `[warning]` for player warnings.  For more information on the `[command]` tag please see the appropriate section [Admin_Cust_Cmds here.]
+
+SharpestTool TODO:
+More about levels.
+Include Permissions / Flags
+
+More about Admins.
+Include Permissions / Flags
+         
+
+=== Considerations/NOT TO DO's ===
+  # If you only have one "Head Admin," it is very unwise to have him/her perform a !setlevel command on him/herself.  Doing this erroneously can result in a loss of his/her admin privileges and will necessitate the use of the !setlevel command from the "Server Console" directly to restore lost privileges. 
+  # The "Server Console" has ultimate Admin authority.  This means you should keep your RCON password as private as possible, being sure not to divulge it to untrusted players, or store it in a plainsight file like "server.cfg" or "autoexec.cfg."  We highly recommend you rename your server configuration file using less standard naming conventions. 
+  # Don't !setlevel to every player around.  The maximum number of admins you can have is 1024.  The admin system defaults all unknown players to level 0 and does not count a level 0 player as an admin.  If you wish to delegate certain features such as !time, !help, or !admintest to level 0 players, edit the "admin.dat." file directly and set the appropriate command flags. 
