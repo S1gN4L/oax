@@ -3,12 +3,12 @@
 = OpenArena Server Administration =
 
 == Overview ==
-Beginning in OAX Beta 40, OpenArena employs a server administration system designed to empower *Server Operators* and *Clans* manage gameplay on their servers.  Several key features are: 
+Beginning in OAX Beta 40, OpenArena employs a server administration system designed to empower *Server Operators* and *Clans* in managing gameplay on their servers.  Several key features are: 
 
   * RCON-less commands. (No need to worry about your RCON password out in the wild!)
   * IP and GUID based Player Kicking/Banning
   * Admin Name Protection
-  * Cuztomizable Admin Levels (Up to 32 different levels)
+  * Customizable Admin Levels (Up to 32 different levels)
   * Customizable Server Commands
   * Player Spam Protection (Chat, Voice Chat, and Name Changes)
   * Auditable Admin Logs
