@@ -12,7 +12,7 @@ For out-of-the-box functionality this checklist can be used to enable the OpenAr
   # Place the empty "admin.dat" file in the working "baseoa" sub-directory of OpenArena.  
   # Set the appropriate CVAR's. (See Below)
   # Start your server.  Review the console output to make sure there is a line under the "game initialization" section that says "!readconfig: blah blah blah." 
-  # Delegate the highest Admin level from the "Server Console," using the !setlevel command (Syntax: !setlevel <player> <adminlevel> ). For example, if the player Sago007 is the player you want to make your highest admin, you would type !setlevel Sago007 5 (where Sago007 is the player you want to make Admin, and level 5 is the level of Admin privileges you want to give him).  This can either be done directly, for a dedicated server, or using RCON.
+  # Delegate the highest Admin level from the "Server Console," using the !setlevel command (Syntax: !setlevel `<player> <adminlevel>` ). For example, if the player Sago007 is the player you want to make your highest admin, you would type !setlevel Sago007 5 (where Sago007 is the player you want to make Admin, and level 5 is the level of Admin privileges you want to give him).  This can either be done directly, for a dedicated server, or using RCON.
   # Your "Head Admin" can now delegate lesser or equal admin privileges from within the game, using the !setlevel command either from his/her own console, the "say:" line, or the "say_team:" line.  He/she can now also execute the various Admin commands at his/her disposal.    
   # If you desire different privileges than the default configuration, you should NOW edit the "admin.dat" file directly, setting your appropriate levels and flags accordingly. (See "Admin.Dat File" below.)  After editing the "Admin.Dat" file, be sure the !readconfig command is executed by the appropriate admin. 
 ----
@@ -45,7 +45,7 @@ Include Permissions / Flags
 
 More about Admins.
 Include Permissions / Flags
-         
+----         
 
 === Considerations/NOT TO DO's ===
   # If you only have one "Head Admin," it is very unwise to have him/her perform a !setlevel command on him/herself.  Doing this erroneously can result in a loss of his/her admin privileges and will necessitate the use of the !setlevel command from the "Server Console" directly to restore lost privileges. 
