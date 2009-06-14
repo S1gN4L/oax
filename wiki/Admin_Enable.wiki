@@ -35,7 +35,7 @@ The "admin.dat" file is essentially a storage file for all the necessary informa
 
 IMPORTANT: IF THIS FILE IS DELETED OR BECOMES CORRUPTED THE SERVER WILL LOSE ALL INFORMATION AND REVERT TO DEFAULT SETTINGS! *BE SURE TO BACK-UP THIS FILE OFTEN!!!*
 
-Now that all the scary stuff is out of the way, let's take a look at the "admin.dat" file.  (For a visual sample open this link in a new window [Admin_Sample here.])
+Now that all the scary stuff is out of the way, let's take a look at the "admin.dat" file.  (For a visual sample open this link in a new window [Admin_File here.])
 
 The various sections of the "admin.dat" file are denoted by bracket tags. `[level]` corresponds to an admin level, `[admin]` for an individual admin, `[command]` for a custom command, `[ban]` for kicks/bans, and `[warning]` for player warnings.  For more information on the `[command]` tag please see the appropriate section [Admin_Cust_Cmds here.]
 
