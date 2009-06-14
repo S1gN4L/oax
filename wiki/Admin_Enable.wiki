@@ -48,7 +48,7 @@ The "level" attribute is a number the Admin System uses to identify the `[level]
 
 The "name" attribute is what will appear on screen in OpenArena when either an !admintest, !listplayers, or !listadmins command is executed.  Color characters entered as part of the "name" attribute will show on screen as well.   "Name" attributes are limited in length to 32 characters. 
 
-The "flags" attribute is the most important attribute to the `[level]` tag as it defines the commands, and privledges afforded to admins who have been assigned that level.   The "*" character denotes the highest level of authority available.   For a list of flags, see the [Admin_Commands list of Admin Commands and flags.]
+The "flags" attribute is the most important attribute to the `[level]` tag as it defines the commands, and privledges afforded to admins who have been assigned that level.   The "asterisk" character denotes the highest level of authority available.   For a list of flags, see the [Admin_Commands list of Admin Commands and flags.]
 
 ==== `[admin]` Tags ====
 If assigning Administrative permissions and privileges through the use of !setlevel is not flexible enough, specific permissions and privileges can be assigned to individual admins manually through modifying the appropriate `[admin]` tag for that player.  
@@ -60,8 +60,7 @@ The "guid" attribute is the actual unique identifier (if you have to ask, you sh
 The "level" attribute represents the admin level the admin has been assigned to.  It corresponds to the appropriate `[level]` tag.  While changing it manually to adjust an admin's privileges or permissions, it is probably best to do so using the !setlevel command in game. 
 
 The "flags" attribute represents individual commands, or permissions which the admin has access to in addition to their assigned admin level.  For a list of flags, see the [Admin_Commands list of Admin Commands and flags.]
-
-----         
+----     
 
 === Considerations/Stuff To Avoid Doing ===
   # If you only have one "Head Admin," it is very unwise to have him/her perform a !setlevel command on him/herself.  Doing this erroneously can result in a loss of his/her admin privileges and will necessitate the use of the !setlevel command from the "Server Console" directly to restore lost privileges. 
