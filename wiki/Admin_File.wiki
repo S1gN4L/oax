@@ -1,4 +1,4 @@
-#summary A Sample "admin.dat" file for reference. 
+#summary A Sample "admin.dat" file for reference.
 
 = Sample OpenArena "admin.dat" File =
 
@@ -35,7 +35,7 @@ flags   = *
 
 [admin]
 name    = SharpestTool
-guid    = (BLANK ON PURPOSE SAMPLE ONLY)
+guid    = 
 level   = 5
 flags   = 
 }}}
