@@ -1,4 +1,5 @@
 #summary The challenge system in OpenArena
+#labels Phase-Design,Phase-Implementation
 
 = Introduction =
 
