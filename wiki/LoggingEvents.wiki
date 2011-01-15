@@ -50,7 +50,19 @@ Code:
  2 | Flag is returned
  3 | Flagcarrier got killed
 
-HARVESTER syntax: to be determened
+HARVESTER syntax: HARVESTER: #1 #2 #3 #4 #5: S1 brought in #5 skulls
+#1 client number
+#2 team number that is scored for, if scored
+#3 Event number, see table
+#4 client number of enemy. Used for event 1
+#5 number of points
+
+#3 | Event description
+----------------------
+ 0 | Skulls captured
+ 1 | Skull carrier killed 
+ 2 | Friendly skull picked up/destroyed
+ 3 | Enemy skull picked up
 
 OVERLOAD syntax: to be decided
 
@@ -119,7 +131,15 @@ Code:
  1 | Point B is taken
  2 | Scores
 
-DOM syntax: DOM: #1 #2: S1 took control of point S2
-#1 and S1 are the client number and nick. There is always a client in this gametype.
-#2 and S2 are the number and name of the point taken.
+DOM syntax: DOM: #1 #2 #3 #4: S1 took control of point S2
+#1 and S1 are the client number and nick. 
+#2 and S2 are the number and name of the point taken. For event 1 this is the number of points 
+#3 is the event number, following the table below.
+#4 is the team number.
+ 
+#3 | Event description
+----------------------
+ 0 | Point taken
+ 1 | Team scores 
+ 
 }}}
