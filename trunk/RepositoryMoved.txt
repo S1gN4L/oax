@@ -1,0 +1,1 @@
+The repository is now located at: https://github.com/OpenArena/gamecode
