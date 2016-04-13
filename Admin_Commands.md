@@ -1,0 +1,3 @@
+# OpenArena Admin Commands #
+
+## Table ##
